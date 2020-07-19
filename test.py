@@ -26,8 +26,8 @@ print(diff)
 product = mult(5, 3)
 print(product)
 
-quotient = div(3 > 15)
+quotient = div(3, 15)
 print(quotient)
 
-quotient = div(15/3)
+quotient = div(15, 3)
 print(quotient)

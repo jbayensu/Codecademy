@@ -24,8 +24,23 @@ def cost_of_drone_shipping(weight):
     return cost
 
 
-cost_of_premium_ground_shipping = 125.00
+def cheapest_shipping_method(weight):
+    ground_shipping = cost_of_ground_shipping(weight)
+    drone_shipping = cost_of_drone_shipping(weight)
+    cost_of_premium_ground_shipping = 125.00
+
+    if(ground_shipping < drone_shipping and ground_shipping < cost_of_premium_ground_shipping):
+        print("Ground shipping is the cheapest and it costs: $ " +
+              str(ground_shipping))
+    elif(drone_shipping < ground_shipping and drone_shipping < cost_of_premium_ground_shipping):
+        print("Drone shipping is the cheapest and it cost: $" + str(drone_shipping))
+    else:
+        print("Premium ground shipping is the cheapest and it cost: $125")
+
 
 print("$" + str(cost_of_ground_shipping(8.4)))
 
 print("$" + str(cost_of_drone_shipping(1.5)))
+
+cheapest_shipping_method(4.8)
+cheapest_shipping_method(41.5)

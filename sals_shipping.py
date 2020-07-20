@@ -38,6 +38,7 @@ def cheapest_shipping_method(weight):
         print("Premium ground shipping is the cheapest and it cost: $125")
 
 
+# testing values
 print("$" + str(cost_of_ground_shipping(8.4)))
 
 print("$" + str(cost_of_drone_shipping(1.5)))
